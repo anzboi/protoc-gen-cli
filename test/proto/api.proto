@@ -1,0 +1,19 @@
+syntax = 'proto3';
+
+package my_package;
+
+service Accounts {
+    rpc GetAccountList(GetAccountListRequest) returns (AccountList);
+}
+
+message GetAccountListRequest {
+    string filter = 1;
+}
+
+message AccountList {
+    repeated Account accounts = 1;
+}
+
+message Account {
+    string id = 1;
+}

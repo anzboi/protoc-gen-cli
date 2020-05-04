@@ -1,0 +1,12 @@
+syntax = 'proto3';
+
+package cli;
+
+import "google/protobuf/descriptor.proto";
+
+option go_package = "clioption";
+
+extend google.protobuf.MethodOptions {
+    string resource = 276102375;
+    string verb = 276102376;
+}
